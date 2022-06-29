@@ -57,20 +57,10 @@ const ExpenseForm = (props) => {
   let x = document.getElementById("form");
   let y = document.getElementById("my-btn2");
 
-  // function addExpenseHandler() {
-  //   x.style.display = "block";
-  //   y.style.display = "none";
-  // }
-  // function addNewExpenseHandler() {
-  //   x.style.display === "block";
-  //   y.style.display === "none";
-  // }
-
   function addExpenseHandler() {
     document.getElementById("form").style.display = "block";
     document.getElementById("my-btn2").style.display = "none";
   }
-
   return (
     <div>
       <form
@@ -95,7 +85,7 @@ const ExpenseForm = (props) => {
               min="0.01"
               step="0.01"
               value={enteredAmount}
-              onChange={amountChangeHandler}
+              // onChange={amountChangeHandler}
             />
           </div>
           <div className="new-expense__control">
@@ -115,6 +105,7 @@ const ExpenseForm = (props) => {
           </button>
         </div>
       </form>
+
       <div className="add-new-expense">
         <button id="my-btn2" className="hidden-btn" onClick={addExpenseHandler}>
           Add New Expense
